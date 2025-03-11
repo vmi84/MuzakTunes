@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MuzakTunesApp: App {
+    // Replace with your actual Jamendo client ID
+    private let jamendoService = JamendoService(clientId: "YOUR_CLIENT_ID")
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView(jamendoService: jamendoService)
         }
     }
 }
